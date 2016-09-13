@@ -12,10 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM ubuntu
+FROM alpine:3.4
 MAINTAINER Reza Qorbani, reza@qorbani.com
 
-RUN apt-get update && \
-    apt-get install -y curl
+RUN apk add --update curl && \
+    rm -rf /var/cache/apk/*
 
-CMD [ "bash" ]
+CMD [ "sh" ]

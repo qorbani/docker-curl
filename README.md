@@ -15,7 +15,7 @@ docker run -ti --link hello:hello qorbani/curl
 
 ```bash
 docker login --username=qorbani
-docker build -t qorbani/curl:latest -t qorbani/curl:v1.0 .
-docker push qorbani/curl
+make build
+make push
 ```
 
